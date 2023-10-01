@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code</title>
+</head>
+<body>
+    <!-- HTML elements for testing the code -->
+
+    <!-- Question 41.1 -->
+    <script>
+        // Question 41.1
+        var i = 0;
+        while (i < 2) {
+            // Does nothing
+            i++;
+        }
+    </script>
+
+    <!-- Question 41.2 -->
+    <script>
+        // Question 41.2
+        var animals = ["horse", "ox", "cow", "pig", "duck"];
+        for (var i = 0; i < animals.length; i++) {
+            if (animals[i] === "pig") {
+                alert("Found it!");
+                break;
+            }
+        }
+    </script>
+
+    <!-- Question 41.3 -->
+    <script>
+        // Question 41.3
+        var counter = 1;
+        while (counter <= 10) {
+            console.log(counter);
+            counter++;
+        }
+    </script>
+
+    <!-- Question 41.4 -->
+    <script>
+        // Question 41.4
+        var userInput;
+        do {
+            userInput = prompt("Enter a number:");
+            alert("You entered: " + userInput);
+        } while (userInput !== null);
+    </script>
+
+    <!-- Question 41.5 -->
+    <script>
+        // Question 41.5
+        var numberToCheck = 7; // Replace with your number
+        if (numberToCheck % 2 === 0) {
+            alert(numberToCheck + " is even.");
+        } else {
+            alert(numberToCheck + " is odd.");
+        }
+    </script>
+
+    <!-- Question 41.6 -->
+    <script>
+        // Question 41.6
+        var targetNumber = Math.floor(Math.random() * 100) + 1;
+        var attempts = 0;
+        var guess;
+        
+        while (guess !== targetNumber) {
+            guess = parseInt(prompt("Guess the number (1-100):"));
+            attempts++;
+
+            if (isNaN(guess)) {
+                alert("Please enter a valid number.");
+            } else if (guess < targetNumber) {
+                alert("Try a higher number.");
+            } else if (guess > targetNumber) {
+                alert("Try a lower number.");
+            }
+        }
+
+        alert("Congratulations! You guessed it in " + attempts + " attempts.");
+    </script>
+
+    <!-- Question 41.7 -->
+    <script>
+        // Question 41.7
+        var seconds = 10; // Set the countdown time in seconds
+        var countdown = seconds;
+
+        // Using setInterval for a countdown timer
+        var timer = setInterval(function() {
+            console.log(countdown);
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(timer);
+                console.log("Time's up!");
+            }
+        }, 1000);
+    </script>
+
+    <!-- Question 46.1 -->
+    <script>
+        // Question 46.1
+        var elementToClick = document.getElementById("elementToClick");
+
+        elementToClick.addEventListener("click", function() {
+            alert("Element clicked!");
+        });
+    </script>
+
+    <!-- Question 46.2 -->
+    <script>
+        // Question 46.2
+        var elementToHide = document.getElementById("elementToHide");
+        var triggerElement = document.getElementById("triggerElement");
+
+        triggerElement.addEventListener("click", function() {
+            elementToHide.style.display = "none";
+        });
+    </script>
+
+    <!-- Question 46.3 -->
+    <style>
+        /* CSS for changing link color on hover */
+        #colorChangeLink:hover {
+            color: red;
+        }
+    </style>
+
+    <!-- Question 46.3 -->
+    <script>
+        // Question 46.3
+        var colorChangeLink = document.getElementById("colorChangeLink");
+
+        colorChangeLink.addEventListener("mouseenter", function() {
+            colorChangeLink.style.color = "red";
+        });
+
+        colorChangeLink.addEventListener("mouseleave", function() {
+            colorChangeLink.style.color = ""; // Reverts to original color
+        });
+    </script>
+
+    <!-- Question 46.4 -->
+    <script>
+        // Question 46.4
+        var scrollToTopLink = document.getElementById("scrollToTopLink");
+
+        scrollToTopLink.addEventListener("click", function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+    <!-- Question 46.5 -->
+    <script>
+        // Question 46.5
+        var playSoundLink = document.getElementById("playSoundLink");
+
+        playSoundLink.addEventListener("click", function() {
+            var audio = new Audio("sound.mp3"); // Replace with your sound file
+            audio.play();
+        });
+    </script>
+
+    <!-- Question 46.6 -->
+    <script>
+        // Question 46.6
+        var openWindowLink = document.getElementById("openWindowLink");
+
+        openWindowLink.addEventListener("click", function() {
+            window.open("https://www.example.com", "NewWindow", "width=800,height=600");
+        });
+    </script>
+
+    <!-- Question 46.7 -->
+    <script>
+        // Question 46.7
+        var alertButton = document.getElementById("alertButton");
+
+        alertButton.addEventListener("click", function() {
+            alert("Button clicked!");
+        });
+    </script>
+
+    <!-- Question 46.8 -->
+    <style>
+        /* CSS for changing button color on hover */
+        #hoverColorButton:hover {
+            background-color: yellow;
+        }
+    </style>
+
+    <!-- Question 46.8 -->
+    <script>
+        // Question 46.8
+        var hoverColorButton = document.getElementById("hoverColorButton");
+
+        hoverColorButton.addEventListener("mouseenter", function() {
+            hoverColorButton.style.backgroundColor = "yellow";
+        });
+
+        hoverColorButton.addEventListener("mouseleave", function() {
+            hoverColorButton.style.backgroundColor = ""; // Reverts to original color
+        });
+    </script>
+
+    <!-- Question 46.9 -->
+    <script>
+        // Question 46.9
+        var playSoundButton = document.getElementById("playSoundButton");
+
+        playSoundButton.addEventListener("click", function() {
+            var audio = new Audio("sound.mp3"); // Replace with your sound file
+            audio.play();
+        });
+    </script>
+
+    <!-- Question 46.10 -->
+    <script>
+        // Question 46.10
+        var elementToAlert = document.getElementById("elementToAlert");
+
+        elementToAlert.addEventListener("mousemove", function() {
+            alert("Mouse moved over the element!");
+        });
+    </script>
+
+    <!-- Question 46.11 -->
+    <script>
+        // Question 46.11
+        var elementToHideOnMouseOut = document.getElementById("elementToHideOnMouseOut");
+
+        elementToHideOnMouseOut.addEventListener("mouseout", function() {
+            elementToHideOnMouseOut.style.display = "none";
+        });
+    </script>
+
+    <!-- Question 46.12 -->
+    <script>
+        // Question 46.12
+        var openResizableWindowLink = document.getElementById("openResizableWindowLink");
+
+        openResizableWindowLink.addEventListener("click", function() {
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+
+            // Calculate window size based on mouse position
+            var windowWidth = mouseX + 200; // Adjust window width as needed
+            var windowHeight = mouseY + 200; // Adjust window height as needed
+
+            window.open("https://www.example.com", "ResizableWindow", "width=" + windowWidth + ",height=" + windowHeight);
+        });
+    </script>
+
+    <!-- Question 49.1 -->
+    <script>
+        // Question 49.1
+        var userInputField = document.getElementById("userInputField");
+        var inputValue = userInputField.value;
+        console.log("Input Value: " + inputValue);
+    </script>
+
+    <!-- Question 49.2 -->
+    <script>
+        // Question 49.2
+        var checkbox = document.getElementById("checkbox");
+        var isChecked = checkbox.checked;
+        console.log("Checkbox Value: " + isChecked);
+    </script>
+
+    <!-- Question 49.3 -->
+    <script>
+        // Question 49.3
+        var selectBox = document.getElementById("selectBox");
+        var selectedOption = selectBox.options[selectBox.selectedIndex].value;
+        console.log("Selected Option: " + selectedOption);
+    </script>
+
+    <!-- Question 49.4 -->
+    <script>
+        // Question 49.4
+        var textField = document.getElementById("textField");
+        var textValue = "Sample Text"; // Replace with your text value
+        textField.value = textValue;
+    </script>
+
+    <!-- Question 49.5 -->
+    <script>
+        // Question 49.5
+        var married = false; // Replace with your condition
+        var statusField = document.getElementById("status");
+        if (!married) {
+            statusField.value = "available";
+        }
+    </script>
+
+    <!-- Question 49.6 -->
+    <script>
+        // Question 49.6
+        var emptyField = document.getElementById("emptyField");
+        var defaultValue = "Default Value"; // Replace with your default value
+        if (emptyField.value === "") {
+            emptyField.value = defaultValue;
+        }
+    </script>
+
+    <!-- Question 51.1 -->
+    <script>
+        // Question 51.1
+        var expandButton = document.getElementById("expandButton");
+        var paragraph = document.getElementById("expandableParagraph");
+        var expanded = false;
+
+        expandButton.addEventListener("click", function() {
+            if (expanded) {
+                paragraph.style.height = "50px"; // Collapsed height
+            } else {
+                paragraph.style.height = "auto"; // Expands to fit content
+            }
+            expanded = !expanded;
+        });
+    </script>
+
+    <!-- Question 51.2 -->
+    <script>
+        // Question 51.2
+        var paragraphText = document.getElementById("paragraphText").textContent;
+        var searchTerm = "specific word or phrase"; // Replace with your search term
+        if (paragraphText.includes(searchTerm)) {
+            console.log("Found the search term.");
+        }
+    </script>
+
+    <!-- Question 51.3 -->
+    <script>
+        // Question 51.3
+        var paragraphText = document.getElementById("paragraphText").textContent;
+        var words = paragraphText.split(" ");
+        var longestWord = "";
+
+        for (var i = 0; i < words.length; i++) {
+            if (words[i].length > longestWord.length) {
+                longestWord = words[i];
+            }
+        }
+
+        console.log("Longest Word: " + longestWord);
+    </script>
+
+    <!-- Question 51.4 -->
+    <script>
+        // Question 51.4
+        var textField = document.getElementById("textField");
+        var paragraph = document.getElementById("paragraph");
+        var inputValue = textField.value;
+
+        if (inputValue !== "") {
+            paragraph.textContent = inputValue;
+        }
+    </script>
+
+    <!-- Question 51.5 -->
+    <script>
+        // Question 51.5
+        var textField = document.getElementById("textField");
+        var paragraph = document.getElementById("paragraph");
+        var inputValue = textField.value;
+        var specificValue = "specific word or phrase"; // Replace with your specific value
+
+        if (inputValue === specificValue) {
+            paragraph.textContent = inputValue;
+        }
+    </script>
+
+    <!-- Question 51.6 -->
+    <script>
+        // Question 51.6
+        var textField = document.getElementById("textField");
+        var paragraph = document.getElementById("paragraph");
+        var inputValue = textField.value;
+        var maxLength = 10; // Replace with your desired maximum length
+
+        if (inputValue.length < maxLength) {
+            paragraph.textContent = inputValue;
+        }
+    </script>
+
+    <!-- Question 52.1 -->
+    <style>
+        /* CSS for making text bold on click */
+        #clickableText:hover {
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Question 52.1 -->
+    <script>
+        // Question 52.1
+        var clickableText = document.getElementById("clickableText");
+
+        clickableText.addEventListener("click", function() {
+            clickableText.style.fontWeight = "bold";
+        });
+    </script>
+
+    <!-- Question 52.2 -->
+    <script>
+        // Question 52.2
+        var image = document.getElementById("hoverImage");
+
+        image.addEventListener("mouseover", function() {
+            image.style.display = "none";
+            // Show text element or perform desired action
+        });
+
+        image.addEventListener("mouseout", function() {
+            image.style.display = "block";
+            // Hide text element or revert to original state
+        });
+    </script>
+
+    <!-- Question 52.3 -->
+    <style>
+        /* CSS for changing background color on hover */
+        #hoverHeading:hover {
+            background-color: black;
+        }
+    </style>
+
+    <!-- Question 52.3 -->
+    <script>
+        // Question 52.3
+        var hoverHeading = document.getElementById("hoverHeading");
+
+        hoverHeading.addEventListener("mouseenter", function() {
+            hoverHeading.style.backgroundColor = "black";
+        });
+
+        hoverHeading.addEventListener("mouseleave", function() {
+            hoverHeading.style.backgroundColor = ""; // Reverts to original color
+        });
+    </script>
+
+    <!-- Question 52.4 -->
+    <style>
+        /* CSS for underlining text on hover */
+        #hoverParagraph:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Question 52.4 -->
+    <script>
+        // Question 52.4
+        var hoverParagraph = document.getElementById("hoverParagraph");
+
+        hoverParagraph.addEventListener("mouseenter", function() {
+            hoverParagraph.style.textDecoration = "underline";
+        });
+
+        hoverParagraph.addEventListener("mouseleave", function() {
+            hoverParagraph.style.textDecoration = "none"; // Reverts to no underline
+        });
+    </script>
+
+    <!-- Question 52.5 -->
+    <script>
+        // Question 52.5
+        var swapImageButton = document.getElementById("swapImageButton");
+        var imageToSwap = document.getElementById("imageToSwap");
+        var isImage1 = true;
+
+        swapImageButton.addEventListener("click", function() {
+            if (isImage1) {
+                imageToSwap.src = "image2.jpg"; // Replace with the second image URL
+            } else {
+                imageToSwap.src = "image1.jpg"; // Replace with the first image URL
+            }
+            isImage1 = !isImage1;
+        });
+    </script>
+</body>
+</html>
